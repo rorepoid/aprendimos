@@ -1,6 +1,6 @@
 <?php
-
-/*
+use Inertia\Inertia;
+/* 
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
@@ -12,5 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    // dd(Inertia::render('Welcome', ['name' => 'import']));
+    return Inertia::render('Hola', ['name' => 'import']);
 });
