@@ -5,15 +5,19 @@ class FizzBuzz {
     public function getList() 
     {
         $list = range(1, 20);
-        foreach(range(1,20) as $key => $value){
-            if ($value % 3 == 0) {
-                $list[$key] = "fizz";
-            }elseif ($value % 5 == 0) {
-                $list[$key] = "buzz";
-            }else {
-                $list[$key] = $value;
+        $list = array_map(function($number){
+            switch ($number) {
+                case $number % 3 == 0:
+                    return 'fizz';
+                    break;
+                case $number % 5 == 0: 
+                    return 'buzz';
+                    break;
+                default:
+                    return $number;
+                    break;
             }
-        }
+        }, $list);
         return $list;
     }
 }
