@@ -21,4 +21,11 @@ class FizzBuzzTest extends TestCase
         $list = $fb->getList();
         $this->assertEquals("fizz", $list[2]);
     }
+
+    public function test_get_buzz_when_value_is_5()
+    {
+        $fb = new FizzBuzz();
+        $list = $fb->getList();
+        $this->assertEquals("buzz", $list[4]);
+    }
 }
