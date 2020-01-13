@@ -7,6 +7,9 @@ class FizzBuzz {
         $list = range(1, 20);
         $list = array_map(function($number){
             switch ($number) {
+                case $number % 5 == 0 && $number % 3 == 0: 
+                    return 'FizzBuzz';
+                    break;
                 case $number % 3 == 0:
                     return 'Fizz';
                     break;
@@ -18,6 +21,7 @@ class FizzBuzz {
                     break;
             }
         }, $list);
+
         return $list;
     }
 }
