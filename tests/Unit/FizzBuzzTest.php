@@ -35,4 +35,42 @@ class FizzBuzzTest extends TestCase
         $list = $fb->getList();
         $this->assertEquals("FizzBuzz", $list[14]);
     }
+
+    /**
+     * @param $number
+     * @param $expectedValue
+     * @dataProvider numbers
+     */
+    public function test_correct_values_for_20_numbers($number, $expectedValue)
+    {
+        $fb = new FizzBuzz();
+        $list = $fb->getList();
+        $this->assertEquals($expectedValue, $list[$number - 1]);
+    }
+
+    public function numbers()
+    {
+        return [
+            [1, 1],
+            [2, 2],
+            [3, "Fizz"],
+            [4, 4],
+            [5, "Buzz"],
+            [6, "Fizz"],
+            [7, 7],
+            [8, 8],
+            [9, "Fizz"],
+            [10, "Buzz"],
+            [11, 11],
+            [12, "Fizz"],
+            [13, 13],
+            [14, 14],
+            [15, "FizzBuzz"],
+            [16, 16],
+            [17, 17],
+            [18, "Fizz"],
+            [19, 19],
+            [20, "Buzz"],
+        ];
+    }
 }
