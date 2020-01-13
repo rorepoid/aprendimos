@@ -8,10 +8,10 @@ class FizzBuzz {
         $list = array_map(function($number){
             switch ($number) {
                 case $number % 3 == 0:
-                    return 'fizz';
+                    return 'Fizz';
                     break;
                 case $number % 5 == 0: 
-                    return 'buzz';
+                    return 'Buzz';
                     break;
                 default:
                     return $number;
