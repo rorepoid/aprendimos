@@ -2,6 +2,7 @@
 
 namespace Tests\Unit;
 
+use App\Concepts\Learning;
 use PHPUnit\Framework\TestCase;
 
 class LearningConceptTest extends TestCase
@@ -11,8 +12,9 @@ class LearningConceptTest extends TestCase
      *
      * @return void
      */
-    public function testExample()
+    public function test_learning_is_a_process()
     {
-        $this->assertTrue(true);
+        $learning = new Learning();
+        $this->assertInstanceOf("App\Concepts\Process", $learning);
     }
 }
