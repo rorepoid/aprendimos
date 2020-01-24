@@ -36,4 +36,10 @@ class LearningConceptTest extends TestCase
         $person = new Person();
         $this->assertObjectHasAttribute("skills", $person);
     }
+
+    public function test_person_has_values()
+    {
+        $person = new Person();
+        $this->assertObjectHasAttribute("values", $person);
+    }
 }
