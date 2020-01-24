@@ -12,6 +12,11 @@ class Person
     protected $values;
     protected $preferences;
 
+    public function learn()
+    {
+
+    }
+
     public function acquire()
     {
 

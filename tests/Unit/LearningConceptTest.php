@@ -61,4 +61,10 @@ class LearningConceptTest extends TestCase
         $this->assertTrue(method_exists($person, "modify"));
     }
 
+    public function test_person_can_learn()
+    {
+        $person = new Person();
+        $this->assertTrue(method_exists($person, "learn"));
+    }
+
 }
