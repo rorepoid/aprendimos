@@ -42,4 +42,11 @@ class LearningConceptTest extends TestCase
         $person = new Person();
         $this->assertObjectHasAttribute("values", $person);
     }
+
+    public function test_person_has_preferences()
+    {
+        $person = new Person();
+        $this->assertObjectHasAttribute("preferences", $person);
+    }
+
 }

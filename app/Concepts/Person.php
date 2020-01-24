@@ -10,4 +10,5 @@ class Person
     protected $behaviors;
     protected $skills;
     protected $values;
+    protected $preferences;
 }
