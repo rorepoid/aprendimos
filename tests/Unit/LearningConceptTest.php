@@ -3,6 +3,7 @@
 namespace Tests\Unit;
 
 use App\Concepts\Learning;
+use App\Concepts\Person;
 use PHPUnit\Framework\TestCase;
 
 class LearningConceptTest extends TestCase
@@ -16,5 +17,11 @@ class LearningConceptTest extends TestCase
     {
         $learning = new Learning();
         $this->assertInstanceOf("App\Concepts\Process", $learning);
+    }
+
+    public function test_person_has_knowledge()
+    {
+        $person = new Person();
+        $this->assertObjectHasAttribute("knowledge", $person);
     }
 }
