@@ -2,6 +2,7 @@
 
 namespace Tests\Unit;
 
+use App\Concepts\Animal;
 use App\Concepts\Learning;
 use App\Concepts\Person;
 use PHPUnit\Framework\TestCase;
@@ -64,6 +65,12 @@ class LearningConceptTest extends TestCase
     public function test_person_can_learn()
     {
         $person = new Person();
+        $this->assertTrue(method_exists($person, "learn"));
+    }
+
+    public function test_animals_can_learn()
+    {
+        $person = new Animal();
         $this->assertTrue(method_exists($person, "learn"));
     }
 
