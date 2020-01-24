@@ -11,4 +11,14 @@ class Person
     protected $skills;
     protected $values;
     protected $preferences;
+
+    public function acquire()
+    {
+
+    }
+
+    public function modify()
+    {
+
+    }
 }

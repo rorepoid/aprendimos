@@ -49,4 +49,16 @@ class LearningConceptTest extends TestCase
         $this->assertObjectHasAttribute("preferences", $person);
     }
 
+    public function test_person_can_acquire_new_knowledge_behavior_skill_value_or_preference()
+    {
+        $person = new Person();
+        $this->assertTrue(method_exists($person, "acquire"));
+    }
+
+    public function test_person_can_modify_existing_knowledge_behavior_skill_value_or_preference()
+    {
+        $person = new Person();
+        $this->assertTrue(method_exists($person, "modify"));
+    }
+
 }
