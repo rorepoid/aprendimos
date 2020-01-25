@@ -3,8 +3,10 @@
 namespace Tests\Unit;
 
 use App\Concepts\Animal;
+use App\Concepts\Event;
 use App\Concepts\Learning;
 use App\Concepts\Person;
+use App\Concepts\Process;
 use PHPUnit\Framework\TestCase;
 
 class LearningConceptTest extends TestCase
@@ -16,8 +18,8 @@ class LearningConceptTest extends TestCase
      */
     public function test_learning_is_a_process()
     {
-        $learning = new Learning();
-        $this->assertInstanceOf("App\Concepts\Process", $learning);
+        $learning = new Learning(new Event());
+        $this->assertInstanceOf(Process::class, $learning);
     }
 
     public function test_person_has_knowledge()
@@ -72,6 +74,15 @@ class LearningConceptTest extends TestCase
     {
         $person = new Animal();
         $this->assertTrue(method_exists($person, "learn"));
+    }
+
+    public function test_learning_needs_at_least_one_event()
+    {
+        $event = new Event();
+        $learning = new Learning($event);
+        $test = $learning->getEvent();
+
+        $this->assertInstanceOf(Event::class, $test);
     }
 
 }
