@@ -7,6 +7,7 @@ use App\Concepts\Event;
 use App\Concepts\Learning;
 use App\Concepts\Person;
 use App\Concepts\Process;
+use App\Events\TextRead;
 use PHPUnit\Framework\TestCase;
 
 class LearningConceptTest extends TestCase
@@ -83,6 +84,12 @@ class LearningConceptTest extends TestCase
         $test = $learning->getEvent();
 
         $this->assertInstanceOf(Event::class, $test);
+    }
+
+    public function test_text_read_is_an_event()
+    {
+        $textRead = new TextRead();
+        $this->assertInstanceOf(Event::class, $textRead);
     }
 
 }

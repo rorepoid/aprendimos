@@ -2,6 +2,7 @@
 
 namespace App\Events;
 
+use App\Concepts\Event;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PresenceChannel;
@@ -10,7 +11,7 @@ use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class TextRead
+class TextRead extends Event
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
