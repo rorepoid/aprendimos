@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4d0d3e1af7ce428471d139eb40b3153e",
+    "content-hash": "6bb0c6c65c2ef42a24a5763f6eda89b1",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -4150,16 +4150,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "8.5.1",
+            "version": "8.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "7870c78da3c5e4883eaef36ae47853ebb3cb86f2"
+                "reference": "3ee1c1fd6fc264480c25b6fb8285edefe1702dab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/7870c78da3c5e4883eaef36ae47853ebb3cb86f2",
-                "reference": "7870c78da3c5e4883eaef36ae47853ebb3cb86f2",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/3ee1c1fd6fc264480c25b6fb8285edefe1702dab",
+                "reference": "3ee1c1fd6fc264480c25b6fb8285edefe1702dab",
                 "shasum": ""
             },
             "require": {
@@ -4229,7 +4229,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2019-12-25T14:49:39+00:00"
+            "time": "2019-12-06T05:41:38+00:00"
         },
         {
             "name": "scrivo/highlight.php",
