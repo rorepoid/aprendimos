@@ -35,6 +35,13 @@ class LearningTypesTest extends TestCase
         $this->assertTrue($form);
     }
 
+    public function testNonAssociativeLearningHasSensitizationForm()
+    {
+        $nonAssociativeLearning = $this->nonAssociativeLearning($this->event(), $this->quantity());
+        $form = $nonAssociativeLearning->hasForm('Sensitization');
+        $this->assertTrue($form);
+    }
+
     public function nonAssociativeLearning(Event $event = null, int $quantity = 1)
     {
         //Add an event and number(quantity)
