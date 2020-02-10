@@ -4,6 +4,7 @@ namespace Tests\Feature;
 
 use App\Concepts\Event;
 use App\Concepts\Learning;
+use App\Concepts\Types\ActiveLearning\ActiveLearning;
 use App\Concepts\Types\NonAssociativeLearning\NonAssociativeLearning;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
@@ -57,5 +58,15 @@ class LearningTypesTest extends TestCase
     public function quantity($quantity = null)
     {
         return $quantity ?? 1;
+    }
+
+    public function testActiveLearningIsATypeOfLearning()
+    {
+        $this->assertInstanceOf(Learning::class, $this->activeLearning());
+    }
+
+    public function activeLearning(Event $event = null)
+    {
+        return new ActiveLearning($event ?? new Event());
     }
 }
