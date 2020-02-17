@@ -25,6 +25,6 @@ class Learn
      */
     public function handle($event)
     {
-        //
+        $event->user->modify($event->user->knowledge);
     }
 }

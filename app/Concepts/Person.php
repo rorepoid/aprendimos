@@ -4,6 +4,8 @@
 namespace App\Concepts;
 
 
+use App\Events\TextRead;
+
 class Person
 {
     protected $knowledge;
@@ -25,5 +27,10 @@ class Person
     public function modify()
     {
 
+    }
+
+    public function readText(Text $text)
+    {
+        event(new TextRead($this, $text));
     }
 }

@@ -115,14 +115,4 @@ class LearningConceptTest extends TestCase
 
         $this->assertInstanceOf(Event::class, $test);
     }
-
-    /**
-     * Un texto leído es un evento
-     */
-    public function test_text_read_is_an_event()
-    {
-        $textRead = new TextRead();
-        $this->assertInstanceOf(Event::class, $textRead);
-    }
-
 }
