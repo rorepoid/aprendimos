@@ -6,7 +6,7 @@ namespace App\Concepts;
 
 class Text
 {
-    protected $read = false;
+    public $read = false;
 
     public function __construct()
     {

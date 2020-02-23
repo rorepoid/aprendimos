@@ -22,7 +22,7 @@ class LearningExampleTest extends TestCase
         $text = $this->text();
         $user->readText($text);
         Event::assertDispatched(TextRead::class, function ($e) use ($user, $text) {
-            return $e->text->isRead == true;
+            return $e->text->read == true;
         });
     }
 

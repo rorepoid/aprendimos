@@ -26,8 +26,9 @@ class TextRead extends Event
      */
     public function __construct(Person $person, Text $text)
     {
-        $this->person = $person;
+//        $this->person = $person;
         $this->text = $text;
+        $this->text->markAsRead();
     }
 
     /**
