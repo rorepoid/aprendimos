@@ -6,15 +6,15 @@ namespace App\Concepts;
 
 class Learning extends Process
 {
-    protected $event;
+    protected $events;
 
-    public function __construct(Event $event)
+    public function __construct(Event ...$events)
     {
-        $this->event = $event;
+        $this->events = $events;
     }
 
-    public function getEvent()
+    public function getEvents()
     {
-        return $this->event;
+        return $this->events;
     }
 }

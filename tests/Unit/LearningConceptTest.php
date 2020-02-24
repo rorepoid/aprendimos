@@ -110,8 +110,10 @@ class LearningConceptTest extends TestCase
     {
         $event = new Event();
         $learning = new Learning($event);
-        $test = $learning->getEvent();
+        $test = $learning->getEvents();
 
-        $this->assertInstanceOf(Event::class, $test);
+        foreach ($test as $item) {
+            $this->assertInstanceOf(Event::class, $item);
+        }
     }
 }
