@@ -6,8 +6,6 @@ use App\Concepts\Event;
 use App\Concepts\Learning;
 use App\Concepts\Types\ActiveLearning\ActiveLearning;
 use App\Concepts\Types\NonAssociativeLearning\NonAssociativeLearning;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
 class LearningTypesTest extends TestCase
@@ -46,8 +44,7 @@ class LearningTypesTest extends TestCase
     public function nonAssociativeLearning(Event $event = null, int $quantity = 1)
     {
         //Add an event and number(quantity)
-        $obj = new NonAssociativeLearning($event ?? new Event(), $quantity);
-        return $obj;
+        return new NonAssociativeLearning($event ?? new Event(), $quantity);
     }
 
     public function event(Event $event = null)

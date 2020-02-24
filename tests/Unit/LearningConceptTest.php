@@ -7,7 +7,6 @@ use App\Concepts\Event;
 use App\Concepts\Learning;
 use App\Concepts\Person;
 use App\Concepts\Process;
-use App\Events\TextRead;
 use PHPUnit\Framework\TestCase;
 
 class LearningConceptTest extends TestCase
