@@ -108,20 +108,14 @@ class LearningConceptTest extends TestCase
      */
     public function test_learning_needs_at_least_one_event()
     {
-        $event = new Event();
-        $event2 = new Event();
-        $event3 = new Event();
-        $event4 = new Event();
-        $learning = new Learning($event);
-        $learning2 = new Learning($event, $event2, $event3, $event4);
-        $test1 = $learning->getEvents();
-        $test2 = $learning2->getEvents();
+        $learningWithOneEvent = new Learning(new Event());
+        $learningWithFiveEvents = new Learning(new Event(), new Event(), new Event(), new Event(), new Event());
 
-        foreach ($test1 as $item) {
+        foreach ($learningWithOneEvent->getEvents() as $item) {
             $this->assertInstanceOf(Event::class, $item);
         }
 
-        foreach ($test2 as $item) {
+        foreach ($learningWithFiveEvents->getEvents() as $item) {
             $this->assertInstanceOf(Event::class, $item);
         }
     }
