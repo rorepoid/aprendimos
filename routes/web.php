@@ -11,6 +11,4 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', function () {
-    return Inertia::render('Hola', ['name' => 'import']);
-});
+Route::get('/', 'HomeController@index');
