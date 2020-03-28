@@ -1,16 +1,13 @@
 <template>
-  <layout>
+  <div>
     <h1 class="text-2xl font-semibold mb-3">About</h1>
     <p>About my first Inertia.js app!</p>
-  </layout>
+  </div>
 </template>
 
-<!-- <script>
+<script>
 
 export default {
-  components: {
-    Layout,
-  },
+
 }
 </script>
- -->
