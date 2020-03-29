@@ -7,7 +7,7 @@
     <link rel="icon" href="{{ asset('favicon.jpeg') }}" type="image/x-icon"/>
 
     <!-- assets -->
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <script src="{{ mix('js/app.js') }}" defer></script>
     @routes
   </head>
