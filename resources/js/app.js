@@ -1,6 +1,7 @@
 import { InertiaApp } from '@inertiajs/inertia-vue'
 import Vue from 'vue'
 
+Vue.prototype.$route = (...args) => route(...args).url()
 Vue.use(InertiaApp)
 
 const app = document.getElementById('app')
