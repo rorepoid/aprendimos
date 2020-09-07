@@ -1,12 +1,15 @@
 import React from "react";
-import { InertiaLink } from "@inertiajs/inertia-react";
+import Helmet from 'react-helmet';
+import { InertiaLink, usePage } from "@inertiajs/inertia-react";
 
 function Home(props) {
+    const { app } = usePage();
     return (
         <div className="flex justify-center w-screen h-screen bg-blue-100">
+            <Helmet title="Home" />
             <div className="container">
                 <div className="text-6xl text-gray-800">
-                    Welcome to Aprendimos!!!
+                    Welcome!!!
                 </div>
 
                 <p className="text-blue-600 font-bold text-2xl">
