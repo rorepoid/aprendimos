@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return Inertia::render('Welcome/Hola', ['foo' => 'bar']);
+        return Inertia::render('Home/Home', ['message' => 'Never stop learning']);
     }
 
     public function about()

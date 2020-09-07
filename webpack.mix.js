@@ -1,4 +1,6 @@
 const mix = require('laravel-mix');
+const path = require('path');
+const tailwindcss = require('tailwindcss');
 
 /*
  |--------------------------------------------------------------------------
@@ -11,23 +13,17 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/nprogress.css', 'public/css/app.css')
-    .postCss('resources/css/app.css', 'public/css', [
-      require('tailwindcss'),
-    ])
-    .sass('resources/sass/app.scss', 'public/css')
-    .webpackConfig({
-     output: { chunkFilename: 'js/[name].js?id=[chunkhash]' },
-     resolve: {
-       alias: {
-         'vue$': 'vue/dist/vue.runtime.esm.js',
-         '@': path.resolve('resources/js'),
-       },
-     },
-   })
-   .babelConfig({
-       plugins: ['@babel/plugin-syntax-dynamic-import']
-   })
-   .version()
-
+mix.react('resources/js/app.js', 'public/js')
+  .postCss('resources/css/app.css', 'public/css', [
+    tailwindcss('tailwind.config.js')
+  ])
+  .webpackConfig({
+      output: { chunkFilename: 'js/[name].js?id=[chunkhash]' },
+      resolve: {
+          alias: {
+              '@': path.resolve('resources/js')
+          }
+      }
+  })
+  .version()
+  .sourceMaps();
